@@ -132,7 +132,7 @@ export async function finishOidc(oidc: OidcConfig, req: Request) {
 
 	const challenges = parseWwwAuthenticateChallenges(tokenResponse)
 	if (challenges) {
-		throw new Error('Recieved a challenge from the OIDC provider')
+		throw new Error('Received a challenge from the OIDC provider')
 	}
 
 	const result = await processAuthorizationCodeOpenIDResponse(
